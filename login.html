@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login SITTA UT</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body data-page="login">
+    <div class="container">
+      <div class="auth-layout">
+        <div class="auth-card">
+          <div class="site-brand">
+            <span class="brand-mark">UT</span>
+            <span>SITTA Universitas Terbuka</span>
+          </div>
+
+          <h2 class="page-title">Masuk ke SITTA</h2>
+          <p class="subtitle">
+            Sistem Informasi Tiras dan Transaksi Bahan Ajar
+          </p>
+
+          <div class="panel auth-info">
+            <strong>Info Login Dummy:</strong>
+            <p>Email: <code>rina@ut.ac.id</code></p>
+            <p>Password: <code>rina123</code></p>
+          </div>
+
+          <div class="panel">
+            <form id="login-form" class="form-grid">
+              <div class="input-group">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Masukkan email Anda"
+                  required
+                />
+              </div>
+              <div class="input-group">
+                <label for="password">Password</label>
+                <input
+                  id="password"
+                  type="password"
+                  placeholder="Masukkan password Anda"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            <div class="auth-links">
+              <a href="#" id="show-forgot">Lupa Password?</a>
+              <a href="#" id="show-register">Daftar Akun Baru</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-forgot" class="modal-backdrop">
+      <div class="modal">
+        <button class="modal-close">×</button>
+        <h3>Reset Password</h3>
+        <p>Masukkan email Anda untuk menerima instruksi reset password.</p>
+        <form class="form-grid">
+          <div class="input-group">
+            <label for="forgot-email">Email UT</label>
+            <input
+              id="forgot-email"
+              type="email"
+              placeholder="email@ut.ac.id"
+            />
+          </div>
+          <button
+            type="button"
+            class="btn btn-primary"
+            onclick="
+              alert(
+                'Instruksi reset password telah dikirim ke email Anda (simulasi).',
+              )
+            "
+          >
+            Kirim Instruksi
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div id="modal-register" class="modal-backdrop">
+      <div class="modal">
+        <button class="modal-close">×</button>
+        <h3>Daftar Akun Baru</h3>
+        <p>Isi nama, email, dan password untuk membuat akun demo.</p>
+        <form class="form-grid">
+          <div class="input-group">
+            <label for="register-name">Nama Lengkap</label>
+            <input id="register-name" type="text" placeholder="Nama lengkap" />
+          </div>
+          <div class="input-group">
+            <label for="register-email">Email UT</label>
+            <input
+              id="register-email"
+              type="email"
+              placeholder="email@ut.ac.id"
+            />
+          </div>
+          <div class="input-group">
+            <label for="register-password">Password</label>
+            <input
+              id="register-password"
+              type="password"
+              placeholder="Buat password"
+            />
+          </div>
+          <button
+            type="button"
+            class="btn btn-primary"
+            onclick="
+              alert(
+                'Pendaftaran berhasil. Sekarang Anda bisa login dengan akun demo!',
+              )
+            "
+          >
+            Daftar
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
