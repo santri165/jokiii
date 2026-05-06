@@ -1,36 +1,58 @@
 <!doctype html>
 <html lang="id">
   <head>
+    <!-- Metadata halaman stok -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Informasi Stok Bahan Ajar SITTA</title>
+    <!-- Link ke stylesheet utama -->
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body data-page="stok">
+    <!-- Floating Particles Background -->
+    <div class="particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+    <!-- Kontainer utama halaman -->
     <div class="container">
+      <!-- Header dengan branding dan tombol kembali -->
       <div class="header-row">
         <div>
+          <!-- Branding situs -->
           <div class="site-brand">
             <span class="brand-mark">UT</span>
             <span>Informasi Stok</span>
           </div>
+          <!-- Judul halaman dengan greeting dinamis -->
           <h1 class="page-title" id="greeting">Data Stok Bahan Ajar</h1>
+          <!-- Subjudul -->
           <p class="subtitle">
             Lihat stok bahan ajar secara dinamis dan tambahkan item baru
             menggunakan JavaScript DOM.
           </p>
         </div>
         <div>
+          <!-- Tombol kembali ke dashboard -->
           <a href="dashboard.html" class="btn btn-secondary"
             >Kembali ke Dashboard</a
           >
         </div>
       </div>
 
+      <!-- Kartu untuk form tambah stok -->
       <div class="page-card" style="margin-top: 20px">
         <div class="panel">
           <h2>Tambah Stok Baru</h2>
+          <!-- Form tambah stok -->
           <form id="stock-form" class="form-grid">
+            <!-- Grid untuk kode lokasi dan kode barang -->
             <div class="grid-2">
               <div class="input-group">
                 <label for="kode-lokasi">Kode Lokasi</label>
@@ -51,6 +73,7 @@
                 />
               </div>
             </div>
+            <!-- Input nama barang -->
             <div class="input-group">
               <label for="nama-barang">Nama Barang</label>
               <input
@@ -60,6 +83,7 @@
                 required
               />
             </div>
+            <!-- Grid untuk jenis barang dan edisi -->
             <div class="grid-2">
               <div class="input-group">
                 <label for="jenis-barang">Jenis Barang</label>
@@ -75,6 +99,7 @@
                 <input id="edisi" type="text" placeholder="2" required />
               </div>
             </div>
+            <!-- Grid untuk stok dan cover -->
             <div class="grid-2">
               <div class="input-group">
                 <label for="stok">Jumlah Stok</label>
@@ -89,15 +114,31 @@
                 />
               </div>
             </div>
+            <!-- Tombol submit -->
             <button type="submit" class="btn btn-primary">Tambah Stok</button>
           </form>
         </div>
       </div>
 
+      <!-- Section navigasi -->
+      <section style="margin-top: 24px">
+        <!-- Navigasi utama -->
+        <div class="main-nav">
+          <a href="dashboard.html">Beranda</a>
+          <a href="stok.html" class="active">Informasi Stok</a>
+          <a href="tracking.html">Tracking Pengiriman</a>
+          <a href="laporan.html">Laporan</a>
+          <a href="histori.html">Histori Transaksi</a>
+        </div>
+      </section>
+
+      <!-- Kartu untuk tabel stok -->
       <div class="page-card" style="margin-top: 24px">
         <div class="panel">
           <h2>Daftar Stok Bahan Ajar</h2>
+          <!-- Wrapper tabel dengan scroll horizontal -->
           <div class="table-wrapper" style="margin-top: 18px">
+            <!-- Tabel stok -->
             <table>
               <thead>
                 <tr>
@@ -111,6 +152,7 @@
                   <th>Stok</th>
                 </tr>
               </thead>
+              <!-- Body tabel yang akan diisi secara dinamis -->
               <tbody id="stock-table-body"></tbody>
             </table>
           </div>
@@ -118,11 +160,13 @@
       </div>
     </div>
 
+    <!-- Footer dengan informasi data -->
     <footer>
       Data stok ditarik secara dinamis dari file `js/data.js` dan dimanipulasi
       menggunakan DOM.
     </footer>
 
+    <!-- Script data dan aplikasi -->
     <script src="js/data.js"></script>
     <script src="js/app.js"></script>
   </body>

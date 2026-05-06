@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <!-- Metadata halaman laporan -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laporan SITTA UT</title>
+    <!-- Link ke stylesheet utama -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body data-page="laporan">
+    <!-- Floating Particles Background -->
+    <div class="particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+    <!-- Kontainer utama halaman -->
+    <div class="container">
+      <!-- Header dengan branding dan tombol kembali -->
+      <div class="header-row">
+        <div>
+          <!-- Branding situs -->
+          <div class="site-brand">
+            <span class="brand-mark">UT</span>
+            <span>Laporan</span>
+          </div>
+          <!-- Judul halaman dengan greeting dinamis -->
+          <h1 class="page-title" id="greeting">Laporan SITTA UT</h1>
+          <!-- Subjudul -->
+          <p class="subtitle">
+            Monitoring progress DO bahan ajar dan rekap stok untuk distribusi
+            UT.
+          </p>
+        </div>
+        <div>
+          <!-- Tombol kembali ke dashboard -->
+          <a href="dashboard.html" class="btn btn-secondary"
+            >Kembali ke Dashboard</a
+          >
+        </div>
+      </div>
+
+      <!-- Section navigasi -->
+      <section style="margin-top: 24px">
+        <!-- Navigasi utama -->
+        <div class="main-nav">
+          <a href="dashboard.html">Beranda</a>
+          <a href="stok.html">Informasi Stok</a>
+          <a href="tracking.html">Tracking Pengiriman</a>
+          <a href="laporan.html" class="active">Laporan</a>
+          <a href="histori.html">Histori Transaksi</a>
+        </div>
+      </section>
+
+      <!-- Section untuk Monitoring Progress DO -->
+      <div class="page-card" style="margin-top: 20px">
+        <div class="panel">
+          <h2>Monitoring Progress DO Bahan Ajar</h2>
+          <p>Laporan progress pengiriman Delivery Order bahan ajar.</p>
+          <!-- Tabel monitoring -->
+          <table id="monitoring-table" class="data-table">
+            <thead>
+              <tr>
+                <th>Nomor DO</th>
+                <th>Nama Penerima</th>
+                <th>Paket</th>
+                <th>Progress</th>
+                <th>Status</th>
+                <th>Tanggal Update</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Data akan diisi oleh JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Section untuk Rekap Bahan Ajar -->
+      <div class="page-card" style="margin-top: 20px">
+        <div class="panel">
+          <h2>Rekap Bahan Ajar</h2>
+          <p>Ringkasan stok bahan ajar per lokasi.</p>
+          <!-- Tabel rekap -->
+          <table id="rekap-table" class="data-table">
+            <thead>
+              <tr>
+                <th>Kode Lokasi</th>
+                <th>Nama Lokasi</th>
+                <th>Total Stok</th>
+                <th>Jenis Barang</th>
+                <th>Edisi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Data akan diisi oleh JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer dengan informasi data -->
+    <footer>
+      Data dummy diambil dari `js/data.js`. Gunakan tombol navigasi untuk
+      beralih ke halaman lain.
+    </footer>
+
+    <!-- Script data dan aplikasi -->
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

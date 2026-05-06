@@ -1,39 +1,49 @@
 <!doctype html>
 <html lang="id">
   <head>
+    <!-- Metadata halaman tracking -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tracking Pengiriman SITTA</title>
+    <!-- Link ke stylesheet utama -->
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body data-page="tracking">
     <div class="container">
+      <!-- Header dengan branding dan tombol kembali -->
       <div class="header-row">
         <div>
+          <!-- Branding situs -->
           <div class="site-brand">
             <span class="brand-mark">UT</span>
             <span>Tracking Pengiriman</span>
           </div>
+          <!-- Judul halaman dengan greeting dinamis -->
           <h1 class="page-title" id="greeting">Pantau status Delivery Order</h1>
+          <!-- Subjudul -->
           <p class="subtitle">
             Masukkan nomor DO untuk melihat nama mahasiswa, status pengiriman,
             detail ekspedisi, dan riwayat perjalanan.
           </p>
         </div>
         <div>
+          <!-- Tombol kembali ke dashboard -->
           <a href="dashboard.html" class="btn btn-secondary"
             >Kembali ke Dashboard</a
           >
         </div>
       </div>
 
+      <!-- Kartu untuk form pencarian -->
       <div class="page-card" style="margin-top: 20px">
         <div class="panel">
+          <!-- Form pencarian nomor DO -->
           <form
             id="tracking-form"
             class="grid-2"
             style="align-items: end; gap: 18px"
           >
+            <!-- Input nomor DO -->
             <div class="input-group">
               <label for="do-number">Nomor Delivery Order</label>
               <input
@@ -43,19 +53,23 @@
                 required
               />
             </div>
+            <!-- Tombol cari -->
             <button type="submit" class="btn btn-primary">Cari</button>
           </form>
         </div>
       </div>
 
+      <!-- Kontainer untuk detail tracking yang akan diisi secara dinamis -->
       <div id="tracking-details" style="margin-top: 22px"></div>
     </div>
 
+    <!-- Footer dengan informasi simulasi -->
     <footer>
       Halaman tracking ini menunjukkan simulasi detail pengiriman berdasarkan
       data dummy yang tersedia.
     </footer>
 
+    <!-- Script data dan aplikasi -->
     <script src="js/data.js"></script>
     <script src="js/app.js"></script>
   </body>

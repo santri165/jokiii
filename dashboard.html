@@ -1,55 +1,83 @@
 <!doctype html>
 <html lang="id">
   <head>
+    <!-- Metadata halaman dashboard -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard SITTA UT</title>
+    <!-- Link ke stylesheet utama -->
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body data-page="dashboard">
+    <!-- Floating Particles Background -->
+    <div class="particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+    <!-- Kontainer utama halaman -->
     <div class="container">
+      <!-- Header dengan branding dan tombol logout -->
       <header class="header-row">
         <div>
+          <!-- Branding situs -->
           <div class="site-brand">
             <span class="brand-mark">UT</span>
             <span>Dashboard SITTA</span>
           </div>
-          <h1 class="page-title" id="greeting">Selamat datang</h1>
+          <!-- Judul halaman dengan greeting dinamis -->
+          <h1 class="page-title typing" id="greeting">Selamat datang</h1>
+          <!-- Subjudul deskripsi halaman -->
           <p class="subtitle">
             Pantau info stok, progress pengiriman, dan laporan bahan ajar UT
             secara cepat.
           </p>
         </div>
+        <!-- Grup tombol aksi -->
         <div
           class="btn-group"
           style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center"
         >
+          <!-- Tombol logout -->
           <a href="login.html" class="btn btn-tertiary">Keluar</a>
         </div>
       </header>
 
+      <!-- Kartu halaman utama dengan statistik -->
       <div class="page-card" style="margin-top: 18px; padding: 26px">
+        <!-- Grid 2 kolom untuk statistik dan info -->
         <div class="grid-2" style="align-items: flex-start; gap: 24px">
           <div>
+            <!-- Ringkasan profil pengguna -->
             <p
               id="profile-summary"
               style="margin: 0 0 14px; font-size: 1rem; color: var(--muted)"
             ></p>
+            <!-- Grid kartu statistik -->
             <div class="card-grid">
+              <!-- Kartu jumlah pengguna -->
               <div class="card" id="dashboard-count-users">
                 <strong>Pengguna Tercatat</strong>
                 <div class="value">0</div>
               </div>
+              <!-- Kartu jenis stok -->
               <div class="card" id="dashboard-count-stock">
                 <strong>Jenis Stok</strong>
                 <div class="value">0</div>
               </div>
+              <!-- Kartu nomor DO -->
               <div class="card" id="dashboard-count-deliveries">
                 <strong>Nomor DO</strong>
                 <div class="value">0</div>
               </div>
             </div>
           </div>
+          <!-- Kartu informasi tugas praktik -->
           <div class="info-card">
             <h3>Ringkasan Tugas Praktik</h3>
             <p>
@@ -61,50 +89,61 @@
         </div>
       </div>
 
+      <!-- Section navigasi dan menu -->
       <section style="margin-top: 24px">
+        <!-- Navigasi utama -->
         <div class="main-nav">
           <a href="dashboard.html" class="active">Beranda</a>
           <a href="stok.html">Informasi Stok</a>
           <a href="tracking.html">Tracking Pengiriman</a>
+          <a href="laporan.html">Laporan</a>
+          <a href="histori.html">Histori Transaksi</a>
         </div>
-        <div class="menu-grid">
-          <a href="stok.html" class="menu-card">
+        <!-- Grid menu kartu -->
+        <div class="menu-grid parallax">
+          <!-- Kartu menu informasi stok -->
+          <a href="stok.html" class="menu-card parallax-element">
             <h3>Informasi Bahan Ajar</h3>
             <p>
               Melihat daftar stok bahan ajar dan menambahkan item baru secara
               langsung.
             </p>
           </a>
-          <a href="tracking.html" class="menu-card">
+          <!-- Kartu menu tracking -->
+          <a href="tracking.html" class="menu-card parallax-element">
             <h3>Tracking Pengiriman</h3>
             <p>
               Cari status DO dan lihat detail ekspedisi, tanggal kirim, serta
               riwayat perjalanannya.
             </p>
           </a>
-          <div class="menu-card">
+          <!-- Kartu menu monitoring (placeholder) -->
+          <a href="laporan.html" class="menu-card parallax-element">
             <h3>Monitoring Laporan</h3>
             <p>
               Laporan progress DO bahan ajar dan rekap stok untuk kebutuhan
               distribusi UT.
             </p>
-          </div>
-          <div class="menu-card">
+          </a>
+          <!-- Kartu menu histori (placeholder) -->
+          <a href="histori.html" class="menu-card parallax-element">
             <h3>Histori Transaksi</h3>
             <p>
               Data transaksi bahan ajar di UT-Daerah dapat disimulasikan sebagai
               ringkasan sistem.
             </p>
-          </div>
+          </a>
         </div>
       </section>
     </div>
 
+    <!-- Footer dengan informasi data -->
     <footer>
       Data dummy diambil dari `js/data.js`. Gunakan tombol navigasi untuk
       beralih ke halaman pemesanan dan tracking.
     </footer>
 
+    <!-- Script data dan aplikasi -->
     <script src="js/data.js"></script>
     <script src="js/app.js"></script>
   </body>
